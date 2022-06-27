@@ -1,5 +1,7 @@
 #!/bin/python3
 
+# https://www.hackerrank.com/challenges/one-month-preparation-kit-mini-max-sum/problem
+
 import math
 import os
 import random
