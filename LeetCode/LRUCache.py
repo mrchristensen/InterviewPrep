@@ -1,12 +1,11 @@
 # https://leetcode.com/problems/lru-cache/
+# Runtime: 1171 ms, faster than 65.07% of Python3 online submissions for LRU Cache.
+# Memory Usage: 75 MB, less than 85.82% of Python3 online submissions for LRU Cache.
 
 # 28 min intitial, 1hr 25 with linked list
 
 # Time Complexity: O(1)
 # Space Complexitu: O(n)
-
-# Runtime: 1171 ms, faster than 65.07% of Python3 online submissions for LRU Cache.
-# Memory Usage: 75 MB, less than 85.82% of Python3 online submissions for LRU Cache.
 
 # Sorted dictionary solution:
 from collections import OrderedDict
