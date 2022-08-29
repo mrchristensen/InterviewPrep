@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/palindrome-linked-list/submissions/
+# https://leetcode.com/problems/palindrome-linked-list/
 
 # Time Complexity: O(n)
 # Space Complexity: O(1)
