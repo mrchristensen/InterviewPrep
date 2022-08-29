@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/submissions/
+# https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/
 # Runtime: 33 ms, faster than 95.03% of Python3 online submissions for Find Winner on a Tic Tac Toe Game.
 # Memory Usage: 13.8 MB, less than 86.42% of Python3 online submissions for Find Winner on a Tic Tac Toe Game.
 
