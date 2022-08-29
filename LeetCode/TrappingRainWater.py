@@ -4,7 +4,7 @@
 
 # 3 Hours
 
-# Time Complexity: O(n^2)?
+# Time Complexity: O(n)
 # Space Complexity: O(n)
 
 class Node:
@@ -51,20 +51,14 @@ class Solution:
         # Final all peaks (local optima)
         for i in range(1, len(height) - 1):
             point = height[i]            
-            if(point >= height[i - 1] and point >= height[i + 1]):
-                new_node = Node(i, point)
-                self.append(new_node, tail)
+            if(height[i - 1] <= point >= height[i + 1]):
+                self.append(Node(i, point), tail)
                 peaks += 1
         
         # Remove peaks that are in valleys
-        changed = True
-        while(changed):
-            changed = False
-            node = head.next_node.next_node
+        node = head.next_node.next_node
             
-            if(peaks <= 2):
-                break
-            
+        if(peaks >= 3):           
             # Go through all peaks
             while (node.next_node.height != None):
                 # If peak is below its neighbouring peaks, remove it
@@ -72,6 +66,11 @@ class Solution:
                     self.deleteNode(node)
                     changed = True
                     peaks -= 1
+                    
+                    #If we can backup, we should
+                    if(node.previous_node.previous_node.index != None):
+                        node = node.previous_node
+                        continue
                 node = node.next_node
             
         # Find how much water we can fill between the peaks
