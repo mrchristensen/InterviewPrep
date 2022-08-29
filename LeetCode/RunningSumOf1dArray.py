@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/running-sum-of-1d-array/submissions/
+# https://leetcode.com/problems/running-sum-of-1d-array/
 # Runtime: 34 ms, faster than 99.12% of Python3 online submissions for Running Sum of 1d Array.
 # Memory Usage: 14.1 MB, less than 27.31% of Python3 online submissions for Running Sum of 1d Array.
 
