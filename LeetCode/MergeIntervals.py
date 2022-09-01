@@ -2,7 +2,7 @@
 # Runtime: 153 ms, faster than 93.69% of Python3 online submissions for Merge Intervals.
 # Memory Usage: 18.1 MB, less than 85.00% of Python3 online submissions for Merge Intervals.
 
-# 1 hour
+# 42 minutes
 
 # Time Complexity: O(n log n + n) = O(n log n)
 # Space Complexity: O(n)
