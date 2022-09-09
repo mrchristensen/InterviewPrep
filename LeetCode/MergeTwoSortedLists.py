@@ -4,7 +4,7 @@
 
 # 30 minutes
 
-# Time Complexity: O(n)
+# Time Complexity: O(n + m) | n, m = len(list1), len(list2)
 # Space Complexity: O(1)
 
 # Definition for singly-linked list.
