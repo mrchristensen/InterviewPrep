@@ -42,6 +42,8 @@ class Solution:
 # Runtime: 35 ms, faster than 94.58% of Python3 online submissions for Generate Parentheses.
 # Memory Usage: 14.5 MB, less than 5.42% of Python3 online submissions for Generate
 
+# 1 hour 40 minutes
+
 # Time Complexity: O(n^2)
 # Space Complexity: O(n^2)
 # import itertools
