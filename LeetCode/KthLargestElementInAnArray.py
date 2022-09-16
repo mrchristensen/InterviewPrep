@@ -4,7 +4,7 @@
 
 # 22 minutes
 
-# Time Complexity: O(n log n)
+# Time Complexity: O(n log k)
 # Space Complexity: O(n)
 
 import queue
@@ -24,8 +24,7 @@ class Solution:
                 # If we are full, pop the lowest element
                 if(kList.full()):
                     kList.get()
-                # O(log n) 
+                # O(log k) 
                 kList.put(num)
                 
         return kList.get()
-    
