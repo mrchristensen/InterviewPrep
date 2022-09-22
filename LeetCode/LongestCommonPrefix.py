@@ -12,20 +12,20 @@ class Solution:
         strs.sort(key=len)
         key = strs[0]
         longest_prefix = len(key)
-        
+
         for string in strs[1:]:
             while(key[:longest_prefix] != string[:longest_prefix]):
                 longest_prefix -= 1
                 if(longest_prefix == 0):
                     return ""
-        
+
         return key[:longest_prefix]
 
 # 12 minutes
 # class Solution:
 #     def longestCommonPrefix(self, strs: List[str]) -> str:
 #         i = 0
-        
+
 #         while True:
 #             for string in strs:
 #                 if(i >= len(string) or string[i] != strs[0][i]):

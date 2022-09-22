@@ -10,15 +10,15 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = set()
-        
+
         for num in nums:
             if num in seen:
                 return True
             seen.add(num)
-            
+
         return False
-        
-    
+
+
 # Runtime: 642 ms, faster than 58.68% of Python3 online submissions for Contains Duplicate.
 # Memory Usage: 26.1 MB, less than 28.71% of Python3 online submissions for Contains Duplicate.
 
@@ -28,11 +28,11 @@ class Solution:
 # class Solution:
 #     def containsDuplicate(self, nums: List[int]) -> bool:
 #         nums.sort()
-        
+
 #         previous = -10000000001
 #         for num in nums:
 #             if(num == previous):
 #                 return True
 #             previous = num
-            
+
 #         return False

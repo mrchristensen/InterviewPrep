@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/generate-parentheses/    
+# https://leetcode.com/problems/generate-parentheses/
 
 # 1 hour 20 minutes
 
@@ -12,7 +12,7 @@
 class Solution:
     def __init__(self):
         self.combos = []
-    
+
     def generateParenthesis(self, n: int, op = 0, cp = 0, string = "") -> List[str]:
         while(True):
             if(cp == n):
@@ -35,7 +35,7 @@ class Solution:
                 self.generateParenthesis(n, op + 1, cp, str(string + "("))
                 self.generateParenthesis(n, op, cp + 1, str(string + ")"))
                 break
-            
+
         return self.combos
 
 # Dynamic Programming:
@@ -50,17 +50,17 @@ class Solution:
 # class Solution:
 #     def __init__(self):
 #         self.combos = []
-    
+
 #     def generateParenthesis(self, n: int, op = 0, cp = 0, string = "") -> List[str]:
 #         sol_map = {}
-        
+
 #         # Combos for 1
 #         sol_map[1] = {"()"}
 
 #         # Build combos from 2 to n
 #         for i in range(2,n+1):
 #             i_combos = set()
-            
+
 #             # Find relevant sums:
 #             sums = set()
 #             for j in range(1,i):
@@ -68,14 +68,14 @@ class Solution:
 #                     reciprocal = i - j
 #                     sums.add(j)
 #                     sums.add(j)
-#                     i_combos = i_combos.union(self.getCombos(sol_map[j], sol_map[reciprocal]))        
-                
+#                     i_combos = i_combos.union(self.getCombos(sol_map[j], sol_map[reciprocal]))
+
 #             # Previous combo, but wrapped
 #             for prev_combo in sol_map[i-1]:
 #                 i_combos.add("(" + prev_combo + ")")
 
 #             sol_map[i] = i_combos
-        
+
 #         return sol_map[n]
 
 #     def getCombos(self, list1, list2):
@@ -83,5 +83,5 @@ class Solution:
 #         for product in itertools.product(list1, list2):
 #             for perms in itertools.permutations(product):
 #                 s.add(perms[0] + perms[1])
-        
+
 #         return s

@@ -2,7 +2,7 @@
 
 # 21 min
 
-# Time Complexity: O(n) (where n is number of digits)
+# Time Complexity: O(n) | n = len(s) (number of digits)
 # Space Complexity: O(1)
 
 class Solution:
@@ -16,19 +16,18 @@ class Solution:
             "D": 500,
             "M": 1000
         }
-        
+
         end_of_string = 0
         total = 0
         length = len(s)
-        
+
         for i in range(length):
             cur_value = roman_map[s[i]]
             prox_value = roman_map[s[i + 1]] if i + 1 < length else end_of_string
-            
+
             if(cur_value >= prox_value):
                 total += cur_value
             else:
                 total -= cur_value
-                
+
         return total
-    

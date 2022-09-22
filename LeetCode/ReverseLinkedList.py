@@ -13,13 +13,13 @@ class Solution:
         # Check for head being a list
         if(head is None):
             return head
-        
+
         prev = None
         node = head
-        
+
         # Reverse the direction of each node
         while(node.next is not None):
-            next_node = node.next           
+            next_node = node.next
             node.next = prev
 
             prev = node
@@ -27,6 +27,5 @@ class Solution:
 
         # Last node needs to be reversed
         node.next = prev
-        
+
         return node
-    

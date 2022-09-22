@@ -13,18 +13,18 @@ class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         kList = queue.PriorityQueue(k)
         kList.put(nums[0])
-        
+
         # O(n)
         for num in nums[1:]:
             smallest = kList.get()
             kList.put(smallest)
-            
+
             # If we found a bigger value
-            if(kList.full() == False or num > smallest):            
+            if(kList.full() == False or num > smallest):
                 # If we are full, pop the lowest element
                 if(kList.full()):
                     kList.get()
-                # O(log k) 
+                # O(log k)
                 kList.put(num)
-                
+
         return kList.get()

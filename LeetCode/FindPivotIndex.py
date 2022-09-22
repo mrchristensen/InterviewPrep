@@ -18,6 +18,6 @@ class Solution:
             if(left_sum == total_sum - left_sum - current_num):
                 return i
             left_sum += current_num
-            i += 1                
-        
+            i += 1
+
         return -1

@@ -18,5 +18,5 @@ class Solution:
                 else:
                     row.append(triangle[row_index - 2][entry_index-1] + triangle[row_index - 2][entry_index])
             triangle.append(row)
-        
+
         return triangle

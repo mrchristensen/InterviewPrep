@@ -16,31 +16,30 @@
 # Priority Queue Impl
 import queue
 
-
 class PQItem:
     def __init__(self, num, node):
         self.num: int
         item: Any=field(compare=False)
-        
-        
+
+
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         max = 10001
         merged_list = ListNode()
         current_node = merged_list
         pq = queue.PriorityQueue(len(lists))
-        
+
         # Add initial elements to the queue
         for i in range(len(lists)):
             node = lists[i]
             if node:
                 pq.put((node.val, i))
                 lists[i] = node.next
-                
-        
+
+
         while(pq.empty() == False):
             val, i = pq.get()
-            
+
             current_node.next = ListNode(val)
             current_node = current_node.next
 
@@ -52,26 +51,26 @@ class Solution:
 
         return merged_list.next
 
-    
+
 # Initial Impl
 # class Solution:
 #     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
 #         max = 10001
 #         lists = list(filter(None, lists))  # Remove empty lists
 #         merged_list = ListNode()
-        
+
 #         current_node = merged_list
 #         while(len(lists) > 0):
 #             lowest_val = max
 #             lowest_list = None
-            
+
 #             # Find the lowest exposed value in the lists
 #             for k in range(len(lists)):
 #                 # print("k,",k)
 #                 if(lists[k].val < lowest_val):
 #                     lowest_val = lists[k].val
 #                     lowest_list = k
-            
+
 #             # Add the lowest value to the final list
 #             # print("Adding lowest_val to list:", lowest_val)
 #             current_node.next = ListNode(lowest_val)

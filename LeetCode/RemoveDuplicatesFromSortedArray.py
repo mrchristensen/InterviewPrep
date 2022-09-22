@@ -5,14 +5,14 @@
 # 20 minutes
 
 # Time Complexity: O(n)
-# Spacce Complexity: O(1)
+# Space Complexity: O(1)
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         prev = nums[0]
         i = 1
         offset = 0
-        
+
         while i < len(nums):
             if nums[i] == prev:
                 offset += 1
@@ -20,5 +20,5 @@ class Solution:
                 nums[i - offset] = nums[i]
                 prev = nums[i]
             i += 1
-        
+
         return len(nums) - offset

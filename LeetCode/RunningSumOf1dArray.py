@@ -11,9 +11,9 @@ class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
         running_totals = []
         total = 0
-        
+
         for num in nums:
             total += num
             running_totals.append(total)
-            
+
         return running_totals

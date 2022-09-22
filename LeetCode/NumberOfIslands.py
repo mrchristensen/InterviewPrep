@@ -14,14 +14,14 @@ class Solution:
         self.unvisited_land = "1"
         self.directions = [[0,1], [0,-1], [1,0], [-1,0]]
         self.grid = None
-        
+
     def numIslands(self, grid: List[List[str]]) -> int:
         self.grid = grid
         self.n = len(grid)
         self.m = len(grid[0])
         islands = 0
         i, j = 0, 0
-        
+
         # Run DFS whenever we hit new ground
         for i in range(self.n):
             for j in range(self.m):
@@ -30,19 +30,18 @@ class Solution:
                     self.dfs(i, j)
 
         return islands
-    
-    
+
+
     def dfs(self, i, j):
         self.grid[i][j] = self.visited_land
-        
-        # For each neighbour
+
+        # For each neighbor
         for delta in self.directions:
             new_i = i + delta[0]
             new_j = j + delta[1]
-            
+
             # If valid move
             if(0 <= new_i < self.n and 0 <= new_j < self.m):
-                # And unvisted land
+                # And unvisited land
                 if(self.grid[new_i][new_j] == self.unvisited_land):
                     self.dfs(new_i, new_j)
-        

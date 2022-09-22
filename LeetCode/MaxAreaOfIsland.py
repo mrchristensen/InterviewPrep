@@ -14,21 +14,21 @@ class Solution:
         self.max_i = len(grid)
         self.max_j = len(grid[0])
         self.max_size = 0
-        
+
         for i in range(self.max_i):
             for j in range(self.max_j):
                 if(self.grid[i][j] == 1):
                     self.size = 0
                     self.dfs(i, j)
-                    self.max_size = max(self.max_size, self.size)   
-        
+                    self.max_size = max(self.max_size, self.size)
+
         return self.max_size
-        
-        
-    def dfs(self, i, j):        
+
+
+    def dfs(self, i, j):
         self.size += 1
         self.grid[i][j] = 2
-        
+
         for delta in self.directions:
             new_i, new_j = i+delta[0], j+delta[1]
             # If valid move

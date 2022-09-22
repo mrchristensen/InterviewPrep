@@ -18,15 +18,15 @@ def miniMaxSum(arr):
     min = arr[0]
     max = arr[0]
     sum = 0
-    
+
     for num in arr:
         sum += num
-        
+
         if(num < min):
             min = num
         elif(num > max):
             max = num
-            
+
     print(str(sum - max) + " " + str(sum - min))
 
 if __name__ == '__main__':

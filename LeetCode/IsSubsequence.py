@@ -15,7 +15,7 @@ class Solution:
             if(s[i] == t[j]):
                 i += 1
             j += 1
-            
+
         if(i == i_bound):
             return True
         return False

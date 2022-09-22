@@ -12,10 +12,10 @@ class Solution:
         num_prev = 1
         num_prev_prev = 1
         num = 1
-        
+
         for i in range(2,n+1):
             num = num_prev + num_prev_prev
             num_prev_prev = num_prev
             num_prev = num
-        
+
         return num
