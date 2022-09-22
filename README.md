@@ -18,4 +18,4 @@ A journal of the interview prep problems that I have completed
 
 ## Repass:
 
-[LeetCode/MaximumSubarray.py](LeetCode/MaximumSubarray.py)
+ - [LeetCode/MaximumSubarray.py](LeetCode/MaximumSubarray.py)
