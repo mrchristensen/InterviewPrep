@@ -24,6 +24,6 @@ class Solution:
             # If we haven't seen a repeat we found our answer (the dic is ordered)
             if(letter not in repeated_letters):
                 return letter_map[letter]
-        
+
         # Default return value
         return -1
