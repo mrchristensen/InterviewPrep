@@ -13,17 +13,17 @@ class Solution:
         repeated_letters = set()
 
         for i in range(len(s)):
+            # If we haven't seen it before, save the index
             if(s[i] not in letter_map):
                 letter_map[s[i]] = i
+            # Else, add it to repeated letters that we've seen
             else:
                 repeated_letters.add(s[i])
 
-        # print(letter_map)
-
-        # if(len(letter_map) > 0):
-
         for letter in letter_map:
+            # If we haven't seen a repeat we found our answer (the dic is ordered)
             if(letter not in repeated_letters):
                 return letter_map[letter]
-
+        
+        # Default return value
         return -1
