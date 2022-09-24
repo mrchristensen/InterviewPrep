@@ -9,20 +9,22 @@
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-
-        lowest_price = (prices[0], 0)
-        highest_price = (prices[0], 0)
+        lowest_price = prices[0]
+        highest_price = prices[0]
         best_profit = 0
 
         for i in range(len(prices)):
-            if(prices[i] > highest_price[0]):
-                highest_price = (prices[i], i)
-                if(highest_price[0] - lowest_price[0] > best_profit):
-                    best_profit = highest_price[0] - lowest_price[0]
+            # If this is a new highest (update highest price)
+            if(prices[i] > highest_price):
+                highest_price = prices[i]
+                # If these profits are the best we've seen (update best profit)
+                if(highest_price - lowest_price > best_profit):
+                    best_profit = highest_price - lowest_price
 
-            if(prices[i] < lowest_price[0]):
-                lowest_price = (prices[i], i)
-                highest_price = (prices[i], i)
-
+            # If we found a new low
+            if(prices[i] < lowest_price):
+                # Update new low and reset highest prices
+                lowest_price = prices[i]
+                highest_price = prices[i]
 
         return best_profit
