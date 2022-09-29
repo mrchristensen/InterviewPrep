@@ -21,12 +21,15 @@ class Solution:
         total = 0
         length = len(s)
 
+        # Go through each individual numeral
         for i in range(length):
-            cur_value = roman_map[s[i]]
+            cur_value = roman_map[s[i]]  # Get the value from the map
             prox_value = roman_map[s[i + 1]] if i + 1 < length else end_of_string
 
+            # If the current value is bigger than the next, we SUM it to the total (the V in VI equals +5)
             if(cur_value >= prox_value):
                 total += cur_value
+            # If the current value is smaller, we SUBTRACT it from the total (the I in IV equals -1)
             else:
                 total -= cur_value
 
