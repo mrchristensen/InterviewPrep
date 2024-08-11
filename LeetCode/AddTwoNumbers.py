@@ -13,6 +13,7 @@ class Solution:
         sum_list = ListNode()
         current_digit = sum_list
         carried_digit = 0
+        prev = None
 
         # Sum lists while there are digits from both lists
         while(l1 != None or l2 != None or carried_digit > 0):
